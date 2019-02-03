@@ -2,11 +2,11 @@
 
 procedural generated dungeon in Phaser 3
 
-Same demo as https://github.com/Quinten/phaser3-maze-demo, but different [npm package](https://www.npmjs.com/package/dungeon-generator) discovered in [this blogpost](https://www.emanueleferonato.com/2019/01/29/javascript-procedural-dungeon-generator-found-on-github-fixed-a-bit-and-about-to-be-expanded/?utm_source=gamedevjsweekly&utm_medium=email).
+Same demo as https://github.com/Quinten/phaser3-maze-demo, but different algorithm and [npm package](https://www.npmjs.com/package/dungeon-generator) discovered in [this blogpost](https://www.emanueleferonato.com/2019/01/29/javascript-procedural-dungeon-generator-found-on-github-fixed-a-bit-and-about-to-be-expanded/?utm_source=gamedevjsweekly&utm_medium=email).
 
 ### Demo
 
-Nothing playable yet
+https://quinten.github.io/phaser3-dungeon-demo/
 
 ## Running the code
 
