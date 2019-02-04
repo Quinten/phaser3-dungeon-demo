@@ -25,9 +25,6 @@ class MazeLevel extends Level {
         // generate the dungeon (see DungeonPlugin.js)
         this.dungeon.generate(this.gridWidth, this.gridHeight);
 
-        // clip the camera and physics,
-        this.cameras.main.setBounds(0, 0, this.prefabMapWidth, this.prefabMapHeight);
-        this.physics.world.setBounds(0, 0, this.prefabMapWidth, this.prefabMapHeight);
 
         // get the merged tile data
         let tiledata = this.dungeon.createMapData({ shardW: this.shardWidth, shardH: this.shardHeight });
@@ -37,6 +34,13 @@ class MazeLevel extends Level {
         let tiles = map.addTilesetImage('tiles', 'tiles', 8, 8, 0, 0);
         let layer = map.createStaticLayer(0, tiles, 0, 0);
         map.setCollisionBetween(192, 255);
+
+        //console.log(this.dungeon.dungeon.size[0]);
+        //console.log(this.dungeon.dungeon.size[1]);
+
+        // clip the camera and physics,
+        this.cameras.main.setBounds(0, 0, this.dungeon.dungeon.size[0] * this.prefabShardWidth, this.dungeon.dungeon.size[1] * this.prefabShardWidth);
+        this.physics.world.setBounds(0, 0, this.dungeon.dungeon.size[0] * this.prefabShardWidth, this.dungeon.dungeon.size[1] * this.prefabShardWidth);
 
         // Add the player (see Level.js)
         let startPosition = this.dungeon.getStartPosition();
