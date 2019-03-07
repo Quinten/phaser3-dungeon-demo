@@ -1,10 +1,10 @@
 import Level from './Level.js';
 
-class MazeLevel extends Level {
+class DungeonLevel extends Level {
 
     constructor (config)
     {
-        super((config) ? config : { key: 'mazelevel' });
+        super((config) ? config : { key: 'dungeonlevel' });
         this.gridWidth = 64;
         this.gridHeight = 64;
         this.shardWidth = 8;
@@ -60,4 +60,4 @@ class MazeLevel extends Level {
     }
 }
 
-export default MazeLevel;
+export default DungeonLevel;

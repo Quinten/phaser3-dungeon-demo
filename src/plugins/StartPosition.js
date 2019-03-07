@@ -13,12 +13,12 @@ class StartPosition extends Phaser.Plugins.BasePlugin
         this.x = 64;
         this.y = 64;
         this.facing = 'right'; // right or left
-        this.startScene = 'mazelevel';
+        this.startScene = 'dungeonlevel';
     }
 
     start()
     {
-        let lastExit = localStorage.getItem('mazeexit');
+        let lastExit = localStorage.getItem('dungeonexit');
         if (lastExit) {
             console.log('Starting in ' + lastExit);
             this.setExit(JSON.parse(lastExit));
@@ -36,7 +36,7 @@ class StartPosition extends Phaser.Plugins.BasePlugin
         this.y = y;
         this.facing = facing;
         this.startScene = scene;
-        localStorage.setItem('mazeexit', JSON.stringify({x, y, facing, scene}));
+        localStorage.setItem('dungeonexit', JSON.stringify({x, y, facing, scene}));
     }
 }
 

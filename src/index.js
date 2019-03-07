@@ -3,9 +3,8 @@ import Boot from './scenes/Boot.js';
 import Preloader from './scenes/Preloader.js';
 import StartPosition from './plugins/StartPosition.js';
 import SimplePlatformerControls from './plugins/SimplePlatformerControls.js';
-import MazePlugin from './plugins/MazePlugin.js';
 import DungeonPlugin from './plugins/DungeonPlugin.js';
-import MazeLevel from './scenes/MazeLevel.js';
+import DungeonLevel from './scenes/DungeonLevel.js';
 
 window.fadeColor = { r: 5, g: 4, b: 4 };
 
@@ -38,7 +37,6 @@ var config = {
         ],
         global: [
             { key: 'startPosition', plugin: StartPosition, mapping: 'startPosition', start: true },
-            { key: 'MazePlugin', plugin: MazePlugin, mapping: 'maze', start: true },
             { key: 'DungeonPlugin', plugin: DungeonPlugin, mapping: 'dungeon', start: true }
         ]
     },
@@ -48,7 +46,7 @@ var config = {
     scene: [
         Boot,
         Preloader,
-        MazeLevel
+        DungeonLevel
     ]
 };
 

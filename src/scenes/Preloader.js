@@ -21,9 +21,6 @@ class Preloader extends Phaser.Scene {
         // Load assets here
         // ...
         this.load.image('tiles', 'assets/tiles.png');
-        for (let m = 0; m < 16; m++) {
-            this.load.tilemapTiledJSON('map' + m, 'assets/map' + m + '.json');
-        }
         this.load.spritesheet('player', 'assets/player.png', { frameWidth: 32, frameHeight: 32 });
         this.load.image('gamepaused', 'assets/gamepaused.png');
     }
